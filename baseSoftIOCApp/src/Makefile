@@ -14,13 +14,15 @@ DBD += baseSoftIOC.dbd
 
 # baseSoftIOC.dbd will be made up from these files:
 baseSoftIOC_DBD += base.dbd
-baseSoftIOC_DBD += calc.dbd
+baseSoftIOC_DBD += calcSupport.dbd
+baseSoftIOC_DBD += epidRecord.dbd
+baseSoftIOC_DBD += busySupport.dbd
 baseSoftIOC_DBD += devIocStats.dbd
 baseSoftIOC_DBD += asSupport.dbd
 baseSoftIOC_DBD += reccaster.dbd
 
 # Add all the support libraries needed by this IOC
-baseSoftIOC_LIBS += calc autosave devIocStats reccaster
+baseSoftIOC_LIBS += std calc busy autosave devIocStats reccaster
 
 # baseSoftIOC_registerRecordDeviceDriver.cpp derives from baseSoftIOC.dbd
 baseSoftIOC_SRCS += baseSoftIOC_registerRecordDeviceDriver.cpp
